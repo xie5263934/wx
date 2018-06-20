@@ -1,5 +1,25 @@
 <view class='weather-wrapper'>
-<view class='temp'>12°</view>
-<view class='desc'>晴天</view>
-<image class="weather-bg" src="/images/sunny-bg.png" mode="scaleToFill"></image>
+  <view class='temp'>{{temp}}</view>
+  <view class='desc'>{{nowweather}}</view>
+  <image class="weather-bg" src="{{nowWeatherBackGround}}" mode="scaleToFill"></image>
+  <view class='day-weather'>
+  <view class='day-text'>{{todayDate}}</view>
+  <view class='temp-text'>{{todayTemp}}</view>
+  <image class='arron-icon' src='/images/arrow.png'></image>
+  </view>
 </view>
+
+<view class='timetips'>
+  <image class='timetips-icon' src='/images/time-icon.png'></image>
+  <view class='timetips-text'>未来24小时天气预测</view>
+</view>
+
+<scroll-view scroll-x>
+  <view class='forecast-list'>
+    <view class="forecast-item" wx:for="{{itemList}}">
+      <view class='forecast-time'>{{item.time}}</view>
+      <image class='forecast-weather' src="{{item.iconPath}}"></image>
+      <view class='forecast-temp'>{{item.temp}}</view>
+    </view>
+  </view>
+</scroll-view>
