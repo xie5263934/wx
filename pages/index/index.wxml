@@ -1,11 +1,18 @@
 <view class='weather-wrapper'>
+  <view class='location-wrapper'>
+    <view class='location'>
+      <image src='/images/location-icon.png' class='location-icon'></image>
+      <view class='=locaiont-text'>广州市</view>
+    </view>
+    <view class='location-tips'>点击获取当前位置</view>
+  </view>
   <view class='temp'>{{temp}}</view>
   <view class='desc'>{{nowweather}}</view>
   <image class="weather-bg" src="{{nowWeatherBackGround}}" mode="scaleToFill"></image>
   <view class='day-weather'>
-  <view class='day-text'>{{todayDate}}</view>
-  <view class='temp-text'>{{todayTemp}}</view>
-  <image class='arron-icon' src='/images/arrow.png'></image>
+    <view class='day-text'>{{todayDate}}</view>
+    <view class='temp-text'>{{todayTemp}}</view>
+    <image class='arron-icon' src='/images/arrow.png'></image>
   </view>
 </view>
 
